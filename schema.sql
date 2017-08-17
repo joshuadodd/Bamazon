@@ -34,3 +34,17 @@ VALUES  ('Gillete Razor', 'Cosmetics', 4.75, 400),
 		('Aspirin', 'Pharmacy', 4.95, 389),
 		('Rubbing Alcohol', 'Pharmacy', 1.25, 750),
 		('Mujool Dates', 'Grocery', 10.75, 554);
+
+CREATE TABLE departments (
+	DepartmentId INT NOT NULL AUTO_INCREMENT,
+	DepartmentName VARCHAR(100) NOT NULL,
+	OverheadCost DECIMAL(10,2) NOT NULL,
+	TotalSales DECIMAL(10,2),
+	PRIMARY KEY(DepartmentId)
+);
+
+INSERT INTO departments (DepartmentName, OverheadCost) 
+VALUES	('Clothing', 500),
+		('Shoes', 500),
+		('Kitchen', 500),
+		('Electronics', 500);

@@ -8,7 +8,7 @@ An amazon-like application that can take in orders from Customers and deplete fr
 **Bamazon Customer**
 Create a Node application called *bamazonCustomer.js*. Running this application will first display all of the items available for sale. Including the ids, names, and prices of products for sale. The app then prompts the users with two messages:
 
-   *Please enter the ID of the product you wish to purchase*
+   *Please enter the ID of the product you wish to purchase.*
    *How many of this product would you like to order?*
 
 Once the customer has placed the order the bamazonCustomer application checks if the store has enough of the product to meet the customer's request.

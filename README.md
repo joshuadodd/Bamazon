@@ -13,4 +13,9 @@ This program consists of three seperate, but related apps. The first, BamazonCus
  ##Bamazon Supervisor -
  The final app, BamazonSupervisor.js, allows a "Supervisor" to view sales by department or add a new department. Adding a new department is an important feature for the supervisor. While the manager is capable of adding new products, including a department, revenue earned from that department cannot be tracked until after the manager had added that department to the supervisor database.
 
- [link to GitHub](https://github.com/joshuadodd/Bamazon/blob/master/README.md)
+ ##Bamazon Demo
+
+You can watch the demo of the Bamazon app at the link below. 
+
+[Watch Demo Here](https://drive.google.com/open?id=0B-Q5YseOmHMzRlpwTmpqR1dKNjA)
+

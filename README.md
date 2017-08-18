@@ -1,6 +1,7 @@
 **BAMAZON**
 
-An interactive storefront that runs in the console using node. This storefront in no way resembles Amazon, except in name.
+This application implements a simple command line based storefront using the npm inquirer package and the MySQL database backend together with the npm mysql package. 
+An amazon-like application that can take in orders from Customers and deplete from the store's total supplies. There are bonuse features that allow a Manager and Supervisor to implement further changes within the store. 
 
 **How It Works**
 

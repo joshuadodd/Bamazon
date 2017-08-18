@@ -6,10 +6,23 @@ An amazon-like application that can take in orders from Customers and deplete fr
 **How It Works**
 
 **Bamazon Customer**
-This program consists of three seperate, but related apps. The first, BamazonCustomer.js, allows a "customer" to place an order from the Bamazon store. A check is then performed on the store inventory and the customer is either alerted that their order cannot be completed, or they are shown the total amount owed (but no credit card number is requested). Behind the scenes, the quantity ordered by the customer is deducted from the store quantity (which is stored in a SQL table). At the same time, the $ amount of the order is sent to seperate SQL table to allow the corportate Supervisors to track earnings by department.
+Create a Node application called *bamazonCustomer.js*. Running this application will first display all of the items available for sale. Including the ids, names, and prices of products for sale. The app then prompts the users with two messages:
+
+   *Please enter the ID of the product you wish to purchase*
+   *How many of this product would you like to order?*
+
+Once the customer has placed the order the bamazonCustomer application checks if the store has enough of the product to meet the customer's request.
+
+   If not, the app will log the phrase *Insufficient quantity.* , and then prevent the order from going through.
+
 
 **Bamazon Manager**
  The second app, BamazonManager.js, allows a "manager" to view available items, view low inventory (less than five in stock), add to the inventory, or add a new product.
+ If a manager selects *View Products for Sale*, the app will list every available item: the item IDs, names, prices, and quantities.
+ If a manager selects *View Low Inventory*, then it will list all items with an inventory count lower than five.
+ If a manager selects *Add to Inventory*, the app will display a prompt that will let the manager "add more" of any item currently in the store.
+ If a manager selects *Add New Product*, it will allow the manager to add a completely new product to the store.
+
 
  **Bamazon Supervisor**
  The final app, BamazonSupervisor.js, allows a "Supervisor" to view sales by department or add a new department. Adding a new department is an important feature for the supervisor. While the manager is capable of adding new products, including a department, revenue earned from that department cannot be tracked until after the manager had added that department to the supervisor database.
@@ -17,6 +30,5 @@ This program consists of three seperate, but related apps. The first, BamazonCus
  **Bamazon Demo**
 
 **You can watch the demo of the Bamazon app at the link below** 
-
 [Watch Demo Here](https://drive.google.com/open?id=0B-Q5YseOmHMzRlpwTmpqR1dKNjA)
 

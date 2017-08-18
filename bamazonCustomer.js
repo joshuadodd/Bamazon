@@ -19,6 +19,8 @@ connection.connect(function (err) {
 
 
 //Displays all items available in store and then calls the place order function
+//===============================================================================
+
 function showProducts(){
 	connection.query('SELECT * FROM products', function(err, res){
 		if (err) throw err;
@@ -35,6 +37,7 @@ function showProducts(){
 }
 
 //Prompts the user to place an order, fulfills the order, and then calls the new order function
+//=============================================================================================
 function placeOrder(){
 	inquirer.prompt([{
 		name: 'selectId',
@@ -70,13 +73,15 @@ function placeOrder(){
 			console.log('Thank you for your order!');
 			console.log('You owe $' + amountOwed);
 			console.log('');
-			//update products table
+            //update products table
+            //=====================
 			connection.query('UPDATE products SET ? Where ?', [{
 				stock_quantity: res[0].stock_quantity - answer.selectQuantity
 			},{
 				item_id: answer.selectId
 			}], function(err, res){});
-			//update departments table
+            //update departments table
+            //========================
 			logSaleToDepartment();
 			newOrder();
 		}
@@ -85,6 +90,7 @@ function placeOrder(){
 }, function(err, res){})
 };
 //Allows the user to place a new order or end the connection
+//==========================================================
 function newOrder(){
 	inquirer.prompt([{
 		type: 'confirm',
@@ -103,6 +109,7 @@ function newOrder(){
 
 
 //functions to push the sales to the supervisor table
+//===================================================
 function logSaleToDepartment(){
 	connection.query('SELECT * FROM departments WHERE department_name = ?', [currentDepartment], function(err, res){
 		updateSales = res[0].TotalSales + amountOwed;
@@ -118,7 +125,7 @@ function updateDepartmentTable(){
 	}], function(err, res){});
 };
 //Call the original function (all other functions are called within this function)
-//======================================================================
+//================================================================================
 showProducts();
 
 

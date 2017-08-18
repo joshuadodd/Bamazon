@@ -17,9 +17,10 @@ connection.connect(function (err) {
 
 
 //FUNCTIONS
-//=============================================================
+//=========
 
 //Prompt the user for the action they would like to perform and then call the new transaction function
+//====================================================================================================
 function managerInput(){
 	inquirer.prompt([{
 		type: 'list',
@@ -132,6 +133,7 @@ function managerInput(){
 };
 
 //Prompt the user to see if they would like to perform another transaction or end the connection
+//==============================================================================================
 function newTransaction(){
 	inquirer.prompt([{
 		type: 'confirm',

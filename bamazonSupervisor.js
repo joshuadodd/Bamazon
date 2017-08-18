@@ -46,6 +46,7 @@ function supervisorOptions(){
 };
 
 //Prompt the user to see if they would like to perform another transaction or end the connection
+//==============================================================================================
 function newTransaction(){
 	inquirer.prompt([{
 		type: 'confirm',
@@ -71,6 +72,7 @@ function addDepartment(){
 		message: 'Enter overhead costs: '
 	}]).then(function(answer){
 		//variable to hold the user inputs
+		//================================
 		var department = answer.department;
 		var overhead = answer.overhead;
 		connection.query('INSERT INTO departments SET ?', {

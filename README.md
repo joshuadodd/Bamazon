@@ -32,5 +32,5 @@ Once the customer has placed the order the bamazonCustomer application checks if
 
 **You can watch the demo of the Bamazon app at the link below** 
 
-[Watch Demo Here](https://drive.google.com/open?id=0B-Q5YseOmHMzRlpwTmpqR1dKNjA)
+[Watch Demo Here](https://drive.google.com/open?id=0B-Q5YseOmHMzN2l3MlJaUkFpRGc)
 
